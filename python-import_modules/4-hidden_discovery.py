@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-if __name__ == "_main__":
+if __name__ == "__main__":
     from hidden_4 import *
-    allf = dir()
-    for i in range(0, len(allf)):
-        if allf[i][:2] != "__":
-        print("{:s}".format(allf[i]))
+
+    all_names = dir()
+    filtered_names = sorted(name for name in all_names if not name.startswith("__"))
+
+    for name in filtered_names:
+        print(name)
