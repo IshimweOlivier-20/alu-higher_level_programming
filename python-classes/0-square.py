@@ -5,6 +5,7 @@ This module defines the Square class.
 The Square class represents a geometric square.
 """
 
+
 class Square:
     """
     A class representing a square.
