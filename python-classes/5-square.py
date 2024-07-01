@@ -3,7 +3,7 @@
 Module: 4-square
 
 Defines a Square class with private size attribute,
-area and my_print methods.
+area 
 """
 
 
