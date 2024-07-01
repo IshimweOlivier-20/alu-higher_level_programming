@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """
 This module defines a Square class that represents a square and provides methods
 to calculate its area and print it using '#' characters.
