@@ -35,8 +35,7 @@ class Square:
     @size.setter
     def size(self, value):
         """
-        Setter method for setting the size of the square.
-        Raises TypeError if size is not an integer or ValueError if size is negative.
+        Setter method for setting the size of the square. Raises TypeError if size is not an integer or ValueError if size is negative.
 
         Args:
             value (int): Size value to be set.
