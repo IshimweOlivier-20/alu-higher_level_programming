@@ -1,31 +1,30 @@
 #!/usr/bin/python3
 """
-This module defines the Square class.
-
-The Square class represents a square with a private instance attribute 'size'.
+This module defines a Square class that represents a square and provides methods
+to calculate its area and print it using '#' characters.
 """
-
 
 class Square:
     """
-    A class representing a square.
+    Square class represents a square.
 
     Attributes:
-        __size (int): The size of the square.
+        __size (int): Private attribute to store the size of the square.
     """
 
     def __init__(self, size=0):
         """
-        Initializes a square with a given size.
+        Initializes a square object with a given size.
 
         Args:
-            size (int, optional): The size of the square. Defaults to 0.
+            size (int): Optional size of the square (default is 0).
+                         Must be a non-negative integer.
 
         Raises:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
         """
-        self.size = size  # Invoke the setter to validate the size
+        self.__size = size
 
     @property
     def size(self):
@@ -33,7 +32,7 @@ class Square:
         Getter method for retrieving the size of the square.
 
         Returns:
-            int: The size of the square.
+            int: Size of the square.
         """
         return self.__size
 
@@ -43,7 +42,7 @@ class Square:
         Setter method for setting the size of the square.
 
         Args:
-            value (int): The new size of the square.
+            value (int): Size of the square. Must be a non-negative integer.
 
         Raises:
             TypeError: If value is not an integer.
@@ -51,23 +50,22 @@ class Square:
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        self.__size = value
 
     def area(self):
         """
-        Calculates and returns the area of the square.
+        Calculates the area of the square.
 
         Returns:
-            int: The area of the square (size * size).
+            int: Area of the square (size * size).
         """
         return self.__size * self.__size
 
     def my_print(self):
         """
-        Prints a square of '#' characters to stdout based on the size of the square.
+        Prints the square using '#' characters.
 
         If size is 0, prints an empty line.
         """

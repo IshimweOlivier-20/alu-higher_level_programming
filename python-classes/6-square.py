@@ -113,4 +113,4 @@ class Square:
 
         square_line = " " * self.__position[0] + "#" * self.__size
         for _ in range(self.__size):
-            print(square_line)
+            print(square_line)r
