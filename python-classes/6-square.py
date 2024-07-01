@@ -113,4 +113,15 @@ class Square:
 
         square_line = " " * self.__position[0] + "#" * self.__size
         for _ in range(self.__size):
-            print(square_line)r
+            print(square_line)
+
+# Test the Square class
+if __name__ == "__main__":
+    s1 = Square()
+    s1.my_print()
+
+    s2 = Square(5, (2, 1))
+    s2.my_print()
+
+    s3 = Square(3, (1, 2))
+    s3.my_print()
