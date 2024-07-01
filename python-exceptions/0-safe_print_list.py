@@ -7,6 +7,6 @@ def safe_print_integer(value):
             print("{}".format(my_list[item]), end='')
             num += 1
     except IndexError:
-          pass
-      print()
-      return num
+        pass
+    print()
+    return num
