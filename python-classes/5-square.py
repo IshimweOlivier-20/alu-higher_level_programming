@@ -25,7 +25,7 @@ class Square:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
         """
-        self.__size = size
+        self.size = size  # Invoke the setter to validate the size
 
     @property
     def size(self):
