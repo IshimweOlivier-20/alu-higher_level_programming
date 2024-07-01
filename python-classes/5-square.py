@@ -74,11 +74,3 @@ class Square:
         else:
             for _ in range(self.__size):
                 print('#' * self.__size)
-
-# Example usage:
-if __name__ == "__main__":
-    s = Square(5)
-    print(s.size)  # Output: 5
-    print(s.area())  # Output: 25
-    s.my_print()
-
