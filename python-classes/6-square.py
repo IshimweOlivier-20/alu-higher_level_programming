@@ -80,8 +80,8 @@ class Square:
             value (tuple): The new position of the square.
 
         Raises:
-            TypeError: If value is not a tuple.
-            ValueError: If value is not a tuple of 2 positive integers.
+            TypeError: If value is not a tuple or if any element in the tuple is not an integer.
+            ValueError: If the tuple does not contain exactly 2 positive integers.
         """
         if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(num, int) for num in value):
             raise TypeError("position must be a tuple of 2 positive integers")
