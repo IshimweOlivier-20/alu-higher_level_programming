@@ -121,4 +121,11 @@ class Rectangle:
         Returns:
             str: Representation of the rectangle object.
         """
-        return f"Rectangle({self.width}, {self.height})"
+        return f"<Rectangle({self.width}, {self.height})>"
+
+
+if __name__ == "__main__":
+    # Example usage:
+    r = Rectangle(2, 4)
+    print(repr(r))
+    print(str(r))
