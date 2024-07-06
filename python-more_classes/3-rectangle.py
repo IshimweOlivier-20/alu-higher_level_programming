@@ -121,7 +121,8 @@ class Rectangle:
         Returns:
             str: Representation of the rectangle object.
         """
-        return f"<{type(self).__module__}.Rectangle object {self.width}, {self.height}>"
+        return ("<{}.Rectangle object "
+                "{}, {}>").format(type(self).__module__, self.width, self.height)
 
 
 if __name__ == "__main__":
