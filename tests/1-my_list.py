@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
+"""Creates a Mylist class that inherits from list."""
 
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+
+class MyList(list):
+    """Mylist class => A sub class of list"""
+    def __init__(self):
+        """initializes the object"""
+        super().__init__()
+
+    def print_sorted(self):
+        """prints the sorted list"""
+        print(sorted(self))
