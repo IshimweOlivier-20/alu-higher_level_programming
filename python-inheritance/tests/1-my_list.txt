@@ -1,13 +1,23 @@
-#!/usr/bin/python3
-"""Creates a Mylist class that inherits from list."""
+Test for 1-my_list.py
+-------------------------------------------
 
+case 0: import
+>>> MyList = _import_('1-my_list').MyList
+>>>
+-------------------------------------------
 
-class MyList(list):
-    """Mylist class => A sub class of list"""
-    def __init__(self):
-        """initializes the object"""
-        super().__init__()
+case 1: common case
 
-    def print_sorted(self):
-        """prints the sorted list"""
-        print(sorted(self))
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>>
