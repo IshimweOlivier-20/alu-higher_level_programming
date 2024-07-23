@@ -73,30 +73,28 @@ class GradeBook:
         return [student for student in self.student_list if self.grade_from_marks(student.total_marks) == grade]
 
     def generate_transcript(self, student_email):
-        student = next((s for s in self.student_list if s.email == student_email), None)
-        if student:
+    student = next((s for s in self.student_list if s.email == student_email), None)
+    if student:
+        print("............................................................")
+        print("                Welcome to Our Student Transcript              ")
+        print("............................................................")
+        print(f"Student name: {'.' * (25 - len('Student name: ') - len(student.names))} {student.names}")
+        print(f"Student email: {'.' * (25 - len('Student email: ') - len(student.email))} {student.email}")
+        print(f"Gender: {'.' * (25 - len('Gender: ') - len(student.gender))} {student.gender}")
+        print("............................................................")
+        for course, marks in student.courses_registered:
+            print(f"Trimester: {'.' * (25 - len('Trimester: ') - len(course.trimester))} {course.trimester}")
+            print(f"Course name: {'.' * (25 - len('Course name: ') - len(course.name))} {course.name}")
+            print(f"Marks: {'.' * (25 - len('Marks: ') - len(format(marks, '.2f')))} {marks:.2f}")
+            print(f"GPA: {'.' * (25 - len('GPA: ') - len(format(student.GPA, '.2f')))} {student.GPA:.2f}")
+            grade = self.grade_from_marks(marks)
+            print(f"Grade: {'.' * (25 - len('Grade: ') - len(grade))} {grade}")
             print("............................................................")
-            print("                Welcome to Our Student Transcript              ")
+            print(f"{student.names} has successfully completed {course.name}!")
             print("............................................................")
-            print(f"Student name: {'.' * (25 - len('Student name: ' + student.names))} {student.names}")
+    else:
+        print("Student not found")
 
-
-
-            print(f"Student email: {'.' * (25 - len('Student email: ' + student.email))} {student.email}")
-            print(f"Gender: {'.' * (25 - len('Gender: ' + student.gender))} {student.gender}")
-            print("............................................................")
-            for course, marks in student.courses_registered:
-                print(f"Trimester: {'.' * (25 - len('Trimester: ' + course.trimester))} {course.trimester}")
-                print(f"Course name: {'.' * (25 - len('Course name: ' + course.name))} {course.name}")
-                print(f"Marks: {'.' * (25 - len('Marks: ' + format(marks, '.2f')))} {marks:.2f}")
-                print(f"GPA: {'.' * (25 - len('GPA: ' + format(student.GPA, '.2f')))} {student.GPA:.2f}")
-                grade = self.grade_from_marks(marks)
-                print(f"Grade: {'.' * (25 - len('Grade: ' + grade))} {grade}")
-                print("............................................................")
-                print(f"{student.names} has successfully completed {course.name}!")
-                print("............................................................")
-        else:
-            print("Student not found")
 
     def grade_from_marks(self, marks):
         # Custom grading scheme based on marks
