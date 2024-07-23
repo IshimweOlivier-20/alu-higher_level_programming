@@ -74,7 +74,7 @@ class GradeBook:
 
     def generate_transcript(self, student_email):
         student = next((s for s in self.student_list if s.email == student_email), None)
-       if student:
+    if student:
         print("............................................................")
         print("                Welcome to Our Student Transcript              ")
         print("............................................................")
