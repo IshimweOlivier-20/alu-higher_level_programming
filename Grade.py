@@ -73,8 +73,8 @@ class GradeBook:
         return [student for student in self.student_list if self.grade_from_marks(student.total_marks) == grade]
 
     def generate_transcript(self, student_email):
-    student = next((s for s in self.student_list if s.email == student_email), None)
-    if student:
+        student = next((s for s in self.student_list if s.email == student_email), None)
+       if student:
         print("............................................................")
         print("                Welcome to Our Student Transcript              ")
         print("............................................................")
@@ -94,6 +94,7 @@ class GradeBook:
             print("............................................................")
     else:
         print("Student not found")
+
 
 
     def grade_from_marks(self, marks):
