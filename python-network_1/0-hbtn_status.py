@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""This script takes a URL as input, sends a request to the given URL,
-and displays the value of the 'X-Request-Id' header found in the response."""
-
+"""__summary__
+- Write a Python script that fetches https://alu-intranet.hbtn.io/status
+- using the urllib package.
+"""
 import urllib.request
 
 
