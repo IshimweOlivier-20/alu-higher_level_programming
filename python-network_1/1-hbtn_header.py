@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin//python3
 """My documentation"""
 import sys
 import urllib.request
