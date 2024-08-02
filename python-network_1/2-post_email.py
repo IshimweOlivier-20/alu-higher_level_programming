@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """My Documentation """"
-import sys
-import urllib.parse
 import urllib.request
+import urllib.parse
+import sys
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
+    """"Documented"""
     url = sys.argv[1]
-    value = {"email": sys.argv[2]}
-    data = urllib.parse.urlencode(value).encode("ascii")
-
-    request = urllib.request.Request(url, data)
-    with urllib.request.urlopen(request) as response:
-        print(response.read().decode("utf-8"))
+    values = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(values)
+    data = data.encode('ascii')  # data should be bytes
+    req = urllib.request.Request(url, data)
+    with urllib.request.urlopen(req) as response:
+        content = response.read()
+        print("{}".format(content.decode("utf-8")))
