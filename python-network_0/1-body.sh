@@ -1,3 +1,3 @@
-#!bin/bash
-#sends a request and displays responses
+#!/bin/bash
+# display Content-Length
 curl -sI "$1" | grep 'Content-Length' | cut -d " " -f2
