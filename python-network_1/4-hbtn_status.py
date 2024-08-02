@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""My documentation"""
+"""__summary__
+- cript that fetches https://alu-intranet.hbtn.io/status
+"""
 import requests
 
 
