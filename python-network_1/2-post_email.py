@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""My Documentation """"
+"""My documentation"""
+
 import urllib.request
 import urllib.parse
 import sys
